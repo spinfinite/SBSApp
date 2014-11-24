@@ -10,4 +10,8 @@
 
 @interface CommentFieldCell : UITableViewCell
 
+@property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) UILabel *commentLabel;
+@property (nonatomic, strong) UILabel *mainLabel;
+
 @end

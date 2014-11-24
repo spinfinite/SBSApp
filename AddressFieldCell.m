@@ -47,8 +47,4 @@
     
 }
 
--(void)locationMethod{
-    
-    NSLog(@"%@", @"You Are Pushing The Button");
-}
 @end

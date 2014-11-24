@@ -9,6 +9,7 @@
 #import "GetLocationTableViewDataSource.h"
 #import "LocationButtonCell.h"
 #import "AddressFieldCell.h"
+#import "CommentFieldCell.h"
 
 @implementation GetLocationTableViewDataSource
 
@@ -33,7 +34,7 @@
     else if (indexPath.section == 0 && indexPath.row == 1) {
         AddressFieldCell *addressField = [tableView dequeueReusableCellWithIdentifier:@"getAddress" forIndexPath:indexPath];
         addressField.mainLabel.text = @"Address";
-        addressField.textField.placeholder = @"Your Location";
+        addressField.textField.placeholder = @"Your Current Location";
         [addressField.textField setValue:[UIColor colorWithRed:119.0/255.0 green:123.0/255.0 blue:133.0/255.0 alpha:1]
                                        forKeyPath:@"_placeholderLabel.textColor"];
         
@@ -46,6 +47,18 @@
         LocationButtonCell *getLocation = [tableView dequeueReusableCellWithIdentifier:@"getLocation" forIndexPath:indexPath];
         
         return getLocation;
+    }
+    
+    else if (indexPath.section == 0 && indexPath.row == 3){
+        
+        CommentFieldCell *commentField = [tableView dequeueReusableCellWithIdentifier:@"getComment" forIndexPath:indexPath];
+        commentField.mainLabel.text = @"Comment";
+        commentField.textField.placeholder = @"Enter Comments";
+        [commentField.textField setValue:[UIColor colorWithRed:119.0/255.0 green:123.0/255.0 blue:133.0/255.0 alpha:1]
+                              forKeyPath:@"_placeholderLabel.textColor"];
+        
+        return commentField;
+        
     }
     
     else if (indexPath.section == 1 && indexPath.row == 0){
@@ -71,13 +84,9 @@
     }
     else if (indexPath.section == 2 && indexPath.row == 0){
         
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [button addTarget:self
-                   action:@selector(nilSymbol)
-         forControlEvents:UIControlEventTouchUpInside];
-        [button setTitle:@"Show View" forState:UIControlStateNormal];
-        button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
-        return newCell;
+        UITableViewCell *blankCell = [UITableViewCell new];
+        
+        return blankCell;
         
     }
     else{
