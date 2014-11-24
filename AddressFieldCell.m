@@ -37,11 +37,11 @@
     self.addressLabel = label;
     [self addSubview:label];
     
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(255, 7, 50, 40)];
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 7,self.frame.size.width, 40)];
     textField.textColor = [UIColor colorWithRed:238.0/255.0 green:237.0/255.0 blue:234.0/255.0 alpha:1];
-    textField.textAlignment = NSTextAlignmentRight;
+    textField.textAlignment = NSTextAlignmentNatural;
     textField.keyboardType = UIKeyboardTypeNumberPad;
-    textField.delegate = self;
+    //textField.delegate = self;
     self.textField = textField;
     [self addSubview:textField];
     

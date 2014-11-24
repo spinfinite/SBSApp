@@ -10,6 +10,7 @@
 #import "GetLocationTableViewDataSource.h"
 #import <MapKit/MapKit.h>
 #import "LocationButtonCell.h"
+#import "AddressFieldCell.h"
 
 @interface GetLocationViewController () <UITableViewDelegate>
 
@@ -50,6 +51,7 @@
     [self.view addSubview:self.GetLocationTableView];
     
     [self.GetLocationTableView registerClass:[LocationButtonCell class] forCellReuseIdentifier:@"getLocation"];
+    [self.GetLocationTableView registerClass:[AddressFieldCell class] forCellReuseIdentifier:@"getAddress"];
     
     //self.view.backgroundColor = [UIColor blueColor];
     

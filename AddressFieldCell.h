@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddressFieldCell : UITableViewCell <UITextFieldDelegate>
+@interface AddressFieldCell : UITableViewCell //<UITextFieldDelegate>
 
 @property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) UILabel *addressLabel;
+@property (nonatomic, strong) UILabel *mainLabel;
 
 @end

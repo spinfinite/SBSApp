@@ -31,13 +31,14 @@
     }
     
     else if (indexPath.section == 0 && indexPath.row == 1) {
-        AddressFieldCell *addressField = [tableView dequeueReusableCellWithIdentifier:@"liquidation" forIndexPath:indexPath];
+        AddressFieldCell *addressField = [tableView dequeueReusableCellWithIdentifier:@"getAddress" forIndexPath:indexPath];
         addressField.mainLabel.text = @"Address";
-        addressField.textField.placeholder = @"0";
+        addressField.textField.placeholder = @"Your Location";
         [addressField.textField setValue:[UIColor colorWithRed:119.0/255.0 green:123.0/255.0 blue:133.0/255.0 alpha:1]
                                        forKeyPath:@"_placeholderLabel.textColor"];
-
+        
         return addressField;
+        
     }
     
     if (indexPath.section == 0 && indexPath.row == 2){
