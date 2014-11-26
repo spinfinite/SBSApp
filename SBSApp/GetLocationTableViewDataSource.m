@@ -65,10 +65,7 @@
     else if (indexPath.section == 1 && indexPath.row == 0){
         
         MapFieldCell *mapField = [tableView dequeueReusableCellWithIdentifier:@"getMap" forIndexPath:indexPath];
-//        mapField.mainLabel.text = @"Map";
-//        mapField.textField.placeholder = @"Show Map";
-//        [mapField.textField setValue:[UIColor colorWithRed:119.0/255.0 green:123.0/255.0 blue:133.0/255.0 alpha:1]
-//                          forKeyPath:@"_placeholderLabel.textColor"];
+
 
         return mapField;
     }

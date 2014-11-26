@@ -11,7 +11,7 @@
 @interface EnterLocationViewController ()
 
 @property (nonatomic, strong) CLLocationManager *manager;
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) MKMapView *mapView;
 
 @end
 

@@ -61,53 +61,6 @@
 
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    
-//    if(indexPath.row == 0){
-//        
-////        self.manager = [[CLLocationManager alloc] init];
-////        [self.manager requestWhenInUseAuthorization];
-////        
-////        CLLocationCoordinate2D location = CLLocationCoordinate2DMake(40.226192, -111.660087);
-////        float metersInmile = 1609;
-////        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, .5* metersInmile, .5* metersInmile);
-////        
-////        [self.mapView setRegion:region];
-////        
-////        self.view.backgroundColor = [UIColor blueColor];
-//        
-//    }
-//    
-//    else if(indexPath.row == 1){
-//        
-////        self.getLocationDataSource = [GetLocationTableViewDataSource new];
-////        
-////        //Initialize and add the tableView as a subview of the main view
-////        
-////        self.GetLocationTableView = [UITableView new];
-////        self.GetLocationTableView.dataSource = self.getLocationDataSource;
-////        self.GetLocationTableView.frame = self.view.bounds;
-////        [self.view addSubview:self.GetLocationTableView];
-//        
-//    }
-//    
-//    else if(indexPath.row == 2){
-//        
-////        self.manager = [[CLLocationManager alloc] init];
-////        [self.manager requestWhenInUseAuthorization];
-////        
-////        CLLocationCoordinate2D location = CLLocationCoordinate2DMake(40.226192, -111.660087);
-////        float metersInmile = 1609;
-////        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, .5* metersInmile, .5* metersInmile);
-////        
-////        [self.mapView setRegion:region];
-//        
-//        self.view.backgroundColor = [UIColor blueColor];
-//        
-//    }
-//    
-//}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
