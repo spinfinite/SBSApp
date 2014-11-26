@@ -10,6 +10,7 @@
 #import "LocationButtonCell.h"
 #import "AddressFieldCell.h"
 #import "CommentFieldCell.h"
+#import "MapFieldCell.h"
 
 @implementation GetLocationTableViewDataSource
 
@@ -63,24 +64,17 @@
     
     else if (indexPath.section == 1 && indexPath.row == 0){
         
-        UITableViewCell *showMap = [UITableViewCell new];
-        showMap.textLabel.text = @"Your Current Location";
-        showMap.textLabel.textColor = [UIColor colorWithRed:238.0/255.0 green:237.0/255.0 blue:234.0/255.0 alpha:1];
-        showMap.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:20];
+        MapFieldCell *mapField = [tableView dequeueReusableCellWithIdentifier:@"getMap" forIndexPath:indexPath];
+        mapField.mainLabel.text = @"Map";
+        mapField.textField.placeholder = @"Show Map";
+        [mapField.textField setValue:[UIColor colorWithRed:119.0/255.0 green:123.0/255.0 blue:133.0/255.0 alpha:1]
+                          forKeyPath:@"_placeholderLabel.textColor"];
 
-        self.manager = [[CLLocationManager alloc] init];
-        [self.manager requestWhenInUseAuthorization];
-        
-        CLLocationCoordinate2D location = CLLocationCoordinate2DMake(40.226192, -111.660087);
-        float metersInmile = 1609;
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, .5* metersInmile, .5* metersInmile);
-        
-        [self.mapView setRegion:region];
         
 //        UITableViewCell *newCell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
 //        newCell.textLabel.text = @"Cell 2";
         
-        return showMap;
+        return mapField;
     }
     else if (indexPath.section == 2 && indexPath.row == 0){
         

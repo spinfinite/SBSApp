@@ -8,10 +8,10 @@
 
 #import "GetLocationViewController.h"
 #import "GetLocationTableViewDataSource.h"
-#import <MapKit/MapKit.h>
 #import "LocationButtonCell.h"
 #import "AddressFieldCell.h"
 #import "CommentFieldCell.h"
+#import "MapFieldCell.h"
 
 @interface GetLocationViewController () <UITableViewDelegate>
 
@@ -54,6 +54,7 @@
     [self.GetLocationTableView registerClass:[LocationButtonCell class] forCellReuseIdentifier:@"getLocation"];
     [self.GetLocationTableView registerClass:[AddressFieldCell class] forCellReuseIdentifier:@"getAddress"];
     [self.GetLocationTableView registerClass:[CommentFieldCell class] forCellReuseIdentifier:@"getComment"];
+    [self.GetLocationTableView registerClass:[MapFieldCell class] forCellReuseIdentifier:@"getMap"];
     
     //self.view.backgroundColor = [UIColor blueColor];
     

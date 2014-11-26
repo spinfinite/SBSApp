@@ -10,6 +10,7 @@
 		E37D2EEB1A204AE200E66938 /* LocationButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EEA1A204AE200E66938 /* LocationButtonCell.m */; };
 		E37D2EEE1A204B2200E66938 /* AddressFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EED1A204B2200E66938 /* AddressFieldCell.m */; };
 		E37D2EF11A204B5D00E66938 /* CommentFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */; };
+		E37D2EF41A23B9BE00E66938 /* MapFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EF31A23B9BD00E66938 /* MapFieldCell.m */; };
 		E39A4B851A1C2E4100909E63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4B841A1C2E4100909E63 /* main.m */; };
 		E39A4B881A1C2E4100909E63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4B871A1C2E4100909E63 /* AppDelegate.m */; };
 		E39A4B8B1A1C2E4100909E63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4B8A1A1C2E4100909E63 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 		E37D2EED1A204B2200E66938 /* AddressFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressFieldCell.m; path = ../AddressFieldCell.m; sourceTree = "<group>"; };
 		E37D2EEF1A204B5D00E66938 /* CommentFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentFieldCell.h; path = ../CommentFieldCell.h; sourceTree = "<group>"; };
 		E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentFieldCell.m; path = ../CommentFieldCell.m; sourceTree = "<group>"; };
+		E37D2EF21A23B9BD00E66938 /* MapFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapFieldCell.h; sourceTree = "<group>"; };
+		E37D2EF31A23B9BD00E66938 /* MapFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapFieldCell.m; sourceTree = "<group>"; };
 		E39A4B7F1A1C2E4100909E63 /* SBSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39A4B831A1C2E4100909E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39A4B841A1C2E4100909E63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				E37D2EED1A204B2200E66938 /* AddressFieldCell.m */,
 				E37D2EEF1A204B5D00E66938 /* CommentFieldCell.h */,
 				E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */,
+				E37D2EF21A23B9BD00E66938 /* MapFieldCell.h */,
+				E37D2EF31A23B9BD00E66938 /* MapFieldCell.m */,
 				E39A4B8F1A1C2E4100909E63 /* Images.xcassets */,
 				E39A4B911A1C2E4100909E63 /* LaunchScreen.xib */,
 				E39A4B821A1C2E4100909E63 /* Supporting Files */,
@@ -262,6 +267,7 @@
 				E37D2EEE1A204B2200E66938 /* AddressFieldCell.m in Sources */,
 				E39A4BAF1A1C31A300909E63 /* EnterLocationViewController.m in Sources */,
 				E39A4B8B1A1C2E4100909E63 /* ViewController.m in Sources */,
+				E37D2EF41A23B9BE00E66938 /* MapFieldCell.m in Sources */,
 				E39A4B881A1C2E4100909E63 /* AppDelegate.m in Sources */,
 				E39A4BB51A1C364C00909E63 /* MainTableViewDataSource.m in Sources */,
 				E39A4BB81A1C5BE300909E63 /* GetLocationTableViewDataSource.m in Sources */,
