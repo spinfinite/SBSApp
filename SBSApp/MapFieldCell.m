@@ -32,10 +32,9 @@
 
 - (void)setup{
     
-    UITableViewCell *showMap = [UITableViewCell new];
-    showMap.textLabel.text = @"Your Current Location";
-    showMap.textLabel.textColor = [UIColor colorWithRed:238.0/255.0 green:237.0/255.0 blue:234.0/255.0 alpha:1];
-    showMap.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:20];
+    self.textLabel.text = @"Your Current Location";
+    self.textLabel.textColor = [UIColor colorWithRed:238.0/255.0 green:237.0/255.0 blue:234.0/255.0 alpha:1];
+    self.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:20];
     
     self.manager = [[CLLocationManager alloc] init];
     [self.manager requestWhenInUseAuthorization];
@@ -45,6 +44,7 @@
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, .5* metersInmile, .5* metersInmile);
     
     [self.mapView setRegion:region];
+    [self addSubview:_mapView];
     
 }
 
