@@ -48,7 +48,7 @@
     
     
         
-    MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 70)];
+    MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width,100)];
         
     MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
     CLLocationCoordinate2D logCord = CLLocationCoordinate2DMake(47.606, -122.332);

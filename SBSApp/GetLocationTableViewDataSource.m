@@ -43,14 +43,7 @@
         
     }
     
-    if (indexPath.section == 0 && indexPath.row == 2){
-        
-        LocationButtonCell *getLocation = [tableView dequeueReusableCellWithIdentifier:@"getLocation" forIndexPath:indexPath];
-        
-        return getLocation;
-    }
-    
-    else if (indexPath.section == 0 && indexPath.row == 3){
+    else if (indexPath.section == 0 && indexPath.row == 2){
         
         CommentFieldCell *commentField = [tableView dequeueReusableCellWithIdentifier:@"getComment" forIndexPath:indexPath];
         commentField.mainLabel.text = @"Comment";
@@ -65,7 +58,6 @@
     else if (indexPath.section == 1 && indexPath.row == 0){
         
         MapFieldCell *mapField = [tableView dequeueReusableCellWithIdentifier:@"getMap" forIndexPath:indexPath];
-
 
         return mapField;
     }
@@ -94,17 +86,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
-        return 4;
+        return 3;
     }
     else if (section == 1) {
-        return 2;
+        return 1;
     }
     else if (section == 2) {
         return 2;
     }
-    else if (section == 3) {
-        return 2;
-    }
+
     else {
         return 0;
     }

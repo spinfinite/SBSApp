@@ -12,8 +12,6 @@
 
 @interface GetLocationTableViewDataSource : NSObject <UITableViewDataSource>
 
-//@property (weak, nonatomic) MKMapView *mapView;
-//@property (nonatomic, strong) CLLocationManager *manager;
 @property (nonatomic, strong) UILabel *mainLabel;
 @property (nonatomic, strong) UITextField *textField;
 
