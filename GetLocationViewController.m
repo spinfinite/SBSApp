@@ -12,6 +12,7 @@
 #import "AddressFieldCell.h"
 #import "CommentFieldCell.h"
 #import "MapFieldCell.h"
+#import "CameraCell.h"
 
 @interface GetLocationViewController () <UITableViewDelegate>
 
@@ -55,6 +56,8 @@
     [self.GetLocationTableView registerClass:[AddressFieldCell class] forCellReuseIdentifier:@"getAddress"];
     [self.GetLocationTableView registerClass:[CommentFieldCell class] forCellReuseIdentifier:@"getComment"];
     [self.GetLocationTableView registerClass:[MapFieldCell class] forCellReuseIdentifier:@"getMap"];
+    [self.GetLocationTableView registerClass:[CameraCell class] forCellReuseIdentifier:@"getCamera"];
+    
     
     //self.view.backgroundColor = [UIColor blueColor];
     

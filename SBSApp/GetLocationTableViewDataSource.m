@@ -11,6 +11,7 @@
 #import "AddressFieldCell.h"
 #import "CommentFieldCell.h"
 #import "MapFieldCell.h"
+#import "CameraCell.h"
 
 @implementation GetLocationTableViewDataSource
 
@@ -64,9 +65,9 @@
     
     else if (indexPath.section == 2 && indexPath.row == 0){
         
-        UITableViewCell *blankCell = [UITableViewCell new];
+        CameraCell *getCamera = [tableView dequeueReusableCellWithIdentifier:@"getCamera" forIndexPath:indexPath];
         
-        return blankCell;
+        return getCamera;
         
     }
     
@@ -89,7 +90,7 @@
         return 3;
     }
     else if (section == 1) {
-        return 1;
+        return 5;
     }
     else if (section == 2) {
         return 2;
@@ -122,5 +123,15 @@
     
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowInSection:(NSInteger)section{
+    if (section == 0)
+    {
+        return 200;
+    }
+    else
+    {
+        return 0;
+    }
+}
 
 @end

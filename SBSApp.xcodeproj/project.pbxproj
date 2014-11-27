@@ -11,6 +11,7 @@
 		E37D2EEE1A204B2200E66938 /* AddressFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EED1A204B2200E66938 /* AddressFieldCell.m */; };
 		E37D2EF11A204B5D00E66938 /* CommentFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */; };
 		E37D2EF41A23B9BE00E66938 /* MapFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EF31A23B9BD00E66938 /* MapFieldCell.m */; };
+		E37D2EF71A26753400E66938 /* CameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EF61A26753400E66938 /* CameraCell.m */; };
 		E39A4B851A1C2E4100909E63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4B841A1C2E4100909E63 /* main.m */; };
 		E39A4B881A1C2E4100909E63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4B871A1C2E4100909E63 /* AppDelegate.m */; };
 		E39A4B8B1A1C2E4100909E63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4B8A1A1C2E4100909E63 /* ViewController.m */; };
@@ -23,6 +24,7 @@
 		E39A4BAF1A1C31A300909E63 /* EnterLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4BAE1A1C31A200909E63 /* EnterLocationViewController.m */; };
 		E39A4BB51A1C364C00909E63 /* MainTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4BB41A1C364C00909E63 /* MainTableViewDataSource.m */; };
 		E39A4BB81A1C5BE300909E63 /* GetLocationTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4BB71A1C5BE300909E63 /* GetLocationTableViewDataSource.m */; };
+		E3E154FB1A26807A007850F0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E154FA1A26807A007850F0 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentFieldCell.m; path = ../CommentFieldCell.m; sourceTree = "<group>"; };
 		E37D2EF21A23B9BD00E66938 /* MapFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapFieldCell.h; sourceTree = "<group>"; };
 		E37D2EF31A23B9BD00E66938 /* MapFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapFieldCell.m; sourceTree = "<group>"; };
+		E37D2EF51A26753400E66938 /* CameraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraCell.h; sourceTree = "<group>"; };
+		E37D2EF61A26753400E66938 /* CameraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraCell.m; sourceTree = "<group>"; };
 		E39A4B7F1A1C2E4100909E63 /* SBSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39A4B831A1C2E4100909E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39A4B841A1C2E4100909E63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 		E39A4BB41A1C364C00909E63 /* MainTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTableViewDataSource.m; path = ../MainTableViewDataSource.m; sourceTree = "<group>"; };
 		E39A4BB61A1C5BE300909E63 /* GetLocationTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLocationTableViewDataSource.h; sourceTree = "<group>"; };
 		E39A4BB71A1C5BE300909E63 /* GetLocationTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLocationTableViewDataSource.m; sourceTree = "<group>"; };
+		E3E154FA1A26807A007850F0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E154FB1A26807A007850F0 /* AVFoundation.framework in Frameworks */,
 				E39A4BA91A1C312B00909E63 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +96,7 @@
 		E39A4B761A1C2E4100909E63 = {
 			isa = PBXGroup;
 			children = (
+				E3E154FA1A26807A007850F0 /* AVFoundation.framework */,
 				E39A4BA81A1C312B00909E63 /* MapKit.framework */,
 				E39A4B811A1C2E4100909E63 /* SBSApp */,
 				E39A4B9B1A1C2E4100909E63 /* SBSAppTests */,
@@ -130,6 +137,8 @@
 				E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */,
 				E37D2EF21A23B9BD00E66938 /* MapFieldCell.h */,
 				E37D2EF31A23B9BD00E66938 /* MapFieldCell.m */,
+				E37D2EF51A26753400E66938 /* CameraCell.h */,
+				E37D2EF61A26753400E66938 /* CameraCell.m */,
 				E39A4B8F1A1C2E4100909E63 /* Images.xcassets */,
 				E39A4B911A1C2E4100909E63 /* LaunchScreen.xib */,
 				E39A4B821A1C2E4100909E63 /* Supporting Files */,
@@ -271,6 +280,7 @@
 				E39A4B881A1C2E4100909E63 /* AppDelegate.m in Sources */,
 				E39A4BB51A1C364C00909E63 /* MainTableViewDataSource.m in Sources */,
 				E39A4BB81A1C5BE300909E63 /* GetLocationTableViewDataSource.m in Sources */,
+				E37D2EF71A26753400E66938 /* CameraCell.m in Sources */,
 				E39A4BAC1A1C317900909E63 /* GetLocationViewController.m in Sources */,
 				E39A4B851A1C2E4100909E63 /* main.m in Sources */,
 				E37D2EF11A204B5D00E66938 /* CommentFieldCell.m in Sources */,
