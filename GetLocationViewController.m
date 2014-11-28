@@ -13,6 +13,7 @@
 #import "CommentFieldCell.h"
 #import "MapFieldCell.h"
 #import "CameraCell.h"
+#import "CameraViewController.h"
 
 @interface GetLocationViewController () <UITableViewDelegate>
 
@@ -76,5 +77,27 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if(indexPath.section == 2 && indexPath.row == 0){
+        
+        CameraViewController *cameraController = [CameraViewController new];
+        [self.navigationController presentViewController:cameraController animated:YES completion:nil];
+        
+        NSLog(@"%@",@"Getting Called?");
+
+    }
+}
+
+-  (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        return 200;
+    }
+    else {
+        return 40;
+    }
+}
 
 @end
