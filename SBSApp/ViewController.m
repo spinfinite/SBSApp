@@ -56,9 +56,6 @@
         
         EnterLocationViewController *enterLocationView = [EnterLocationViewController new];
         [self.navigationController pushViewController:enterLocationView animated:YES];
-//
-//        CameraViewController *camController = [CameraViewController new];
-//        [self.navigationController pushViewController:camController animated:YES];
         
     }
     

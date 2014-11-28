@@ -42,13 +42,13 @@
     
 //    CameraViewController *cameraController = [[CameraViewController alloc]init];
 //    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:cameraController];
-////    
+//////
 //    self.window.rootViewController = navigationController;
     
     [self addSubview:getCamera];
     
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
     
 }
 
@@ -56,7 +56,13 @@
 
 -(void)locationMethod{
     
-    NSLog(@"%@", @"You Are Pushing the Camera Button");
+//        CameraViewController *camController = [CameraViewController new];
+//        [self.navigationController pushViewController:camController animated:YES];
+    
+    CameraViewController *cameraController = [[CameraViewController alloc]init];
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:cameraController];
+
+    self.window.rootViewController = navigationController;
     
 }
 

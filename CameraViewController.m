@@ -59,6 +59,11 @@
         
         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         
+        CameraViewController *cameraController = [CameraViewController new];
+        [self presentViewController:cameraController animated:YES completion:nil];
+        
+
+        
     }
     
     else{
@@ -66,9 +71,6 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         
     }
-    
-    CameraViewController *cameraController = [CameraViewController new];
-    [self.navigationController pushViewController:cameraController animated:YES];
     
 }
 @end
