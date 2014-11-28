@@ -1,19 +1,19 @@
 //
-//  GetLocationTableViewDataSource.m
+//  EnterLocationTableViewDataSource.m
 //  SBSApp
 //
-//  Created by Sergio Perez on 11/18/14.
+//  Created by Sergio Perez on 11/27/14.
 //  Copyright (c) 2014 Learning iOS Development. All rights reserved.
 //
 
-#import "GetLocationTableViewDataSource.h"
+#import "EnterLocationTableViewDataSource.h"
 #import "LocationButtonCell.h"
 #import "AddressFieldCell.h"
 #import "CommentFieldCell.h"
 #import "MapFieldCell.h"
 #import "CameraCell.h"
 
-@implementation GetLocationTableViewDataSource
+@implementation EnterLocationTableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -34,7 +34,7 @@
         addressField.mainLabel.text = @"Address";
         addressField.textField.placeholder = @"Your Current Location";
         [addressField.textField setValue:[UIColor colorWithRed:119.0/255.0 green:123.0/255.0 blue:133.0/255.0 alpha:1]
-                                       forKeyPath:@"_placeholderLabel.textColor"];
+                              forKeyPath:@"_placeholderLabel.textColor"];
         
         return addressField;
         
@@ -55,7 +55,7 @@
     else if (indexPath.section == 1 && indexPath.row == 0){
         
         MapFieldCell *mapField = [tableView dequeueReusableCellWithIdentifier:@"getMap" forIndexPath:indexPath];
-
+        
         return mapField;
     }
     
@@ -91,7 +91,7 @@
     else if (section == 2) {
         return 2;
     }
-
+    
     else {
         return 0;
     }

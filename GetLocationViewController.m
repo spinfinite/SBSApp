@@ -58,9 +58,7 @@
     [self.GetLocationTableView registerClass:[MapFieldCell class] forCellReuseIdentifier:@"getMap"];
     [self.GetLocationTableView registerClass:[CameraCell class] forCellReuseIdentifier:@"getCamera"];
     
-    
     //self.view.backgroundColor = [UIColor blueColor];
-    
 
 }
 

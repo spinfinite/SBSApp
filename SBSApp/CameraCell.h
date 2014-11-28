@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CameraCell : UITableViewCell
+@interface CameraCell : UITableViewCell <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end

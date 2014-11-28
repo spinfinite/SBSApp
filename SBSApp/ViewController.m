@@ -10,6 +10,7 @@
 #import "GetLocationViewController.h"
 #import "EnterLocationViewController.h"
 #import "MainTableViewDataSource.h"
+#import "CameraViewController.h"
 
 @interface ViewController () <UITableViewDelegate>
 
@@ -55,6 +56,9 @@
         
         EnterLocationViewController *enterLocationView = [EnterLocationViewController new];
         [self.navigationController pushViewController:enterLocationView animated:YES];
+//
+//        CameraViewController *camController = [CameraViewController new];
+//        [self.navigationController pushViewController:camController animated:YES];
         
     }
     

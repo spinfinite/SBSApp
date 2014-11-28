@@ -7,15 +7,30 @@
 //
 
 #import "EnterLocationViewController.h"
+#import "EnterLocationTableViewDataSource.h"
+#import "LocationButtonCell.h"
+#import "AddressFieldCell.h"
+#import "CommentFieldCell.h"
+#import "MapFieldCell.h"
+#import "CameraCell.h"
 
-@interface EnterLocationViewController ()
+@interface EnterLocationViewController () <UITableViewDelegate>
 
-@property (nonatomic, strong) CLLocationManager *manager;
-@property (weak, nonatomic) MKMapView *mapView;
+@property (nonatomic, strong) UITableView *EnterLocationTableView;
+@property (nonatomic, strong) EnterLocationTableViewDataSource *enterLocationDataSource;
 
 @end
 
 @implementation EnterLocationViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,16 +38,27 @@
     
     self.title = @"Enter Location View Controller";
     
-    self.view.backgroundColor = [UIColor blueColor];
+    UIView *view = [[UIView alloc] initWithFrame:self.view.bounds];
+    view.backgroundColor = [UIColor whiteColor];
     
-    self.manager = [[CLLocationManager alloc] init];
-    [self.manager requestWhenInUseAuthorization];
+    self.enterLocationDataSource = [EnterLocationTableViewDataSource new];
     
-    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(40.226192, -111.660087);
-    float metersInmile = 1609;
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, .5* metersInmile, .5* metersInmile);
+    self.EnterLocationTableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     
-    [self.mapView setRegion:region];
+    [self.EnterLocationTableView registerClass:[UITableViewCell class]forCellReuseIdentifier:@"cell"];
+    
+    self.EnterLocationTableView.delegate = self;
+    self.EnterLocationTableView.dataSource = self.enterLocationDataSource;
+    
+    [self.view addSubview:self.EnterLocationTableView];
+    
+    [self.EnterLocationTableView registerClass:[LocationButtonCell class]forCellReuseIdentifier:@"getLocation"];
+    [self.EnterLocationTableView registerClass:[AddressFieldCell class] forCellReuseIdentifier:@"getAddress"];
+    [self.EnterLocationTableView registerClass:[CommentFieldCell class] forCellReuseIdentifier:@"getComment"];
+    [self.EnterLocationTableView registerClass:[MapFieldCell class] forCellReuseIdentifier:@"getMap"];
+    [self.EnterLocationTableView registerClass:[CameraCell class] forCellReuseIdentifier:@"getCamera"];
+    
+//    self.view.backgroundColor = [UIColor blueColor];
     
 }
 

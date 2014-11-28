@@ -7,6 +7,7 @@
 //
 
 #import "CameraCell.h"
+#import "CameraViewController.h"
 
 @implementation CameraCell
 
@@ -38,9 +39,20 @@
     
     getCamera.frame = CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height);
     getCamera.backgroundColor = [UIColor greenColor];
+    
+//    CameraViewController *cameraController = [[CameraViewController alloc]init];
+//    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:cameraController];
+////    
+//    self.window.rootViewController = navigationController;
+    
     [self addSubview:getCamera];
     
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
 }
+
+
 
 -(void)locationMethod{
     
