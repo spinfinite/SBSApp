@@ -16,6 +16,7 @@
     if (self) {
         // Initialization code
         [self setup];
+        
     }
     return self;
 }
@@ -45,5 +46,4 @@
     [self addSubview:mapView];
     
 }
-
 @end

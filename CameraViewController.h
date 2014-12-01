@@ -12,8 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *getImage;
 
-@property (strong, nonatomic) UIImagePickerController *imagePicker;
-
 - (IBAction)pickImage:(id)sender;
 
 @end

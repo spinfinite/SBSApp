@@ -12,6 +12,7 @@
 #import "CommentFieldCell.h"
 #import "MapFieldCell.h"
 #import "CameraCell.h"
+#import "CameraViewController.h"
 
 @implementation GetLocationTableViewDataSource
 
@@ -27,6 +28,7 @@
         LocationButtonCell *getLocation = [tableView dequeueReusableCellWithIdentifier:@"getLocation" forIndexPath:indexPath];
         
         return getLocation;
+        
     }
     
     else if (indexPath.section == 0 && indexPath.row == 1) {
@@ -42,6 +44,25 @@
     
     else if (indexPath.section == 0 && indexPath.row == 2){
         
+        MapFieldCell *mapField = [tableView dequeueReusableCellWithIdentifier:@"getMap" forIndexPath:indexPath];
+        
+        return mapField;
+    }
+    
+    else if (indexPath.section == 1 && indexPath.row == 0){
+        
+        CommentFieldCell *commentField = [tableView dequeueReusableCellWithIdentifier:@"getComment" forIndexPath:indexPath];
+        commentField.mainLabel.text = @"Comment";
+        commentField.textField.placeholder = @"Enter Correct Speed Limit";
+        [commentField.textField setValue:[UIColor colorWithRed:119.0/255.0 green:123.0/255.0 blue:133.0/255.0 alpha:1]
+                              forKeyPath:@"_placeholderLabel.textColor"];
+        
+        return commentField;
+        
+    }
+    
+    else if (indexPath.section == 1 && indexPath.row == 1){
+        
         CommentFieldCell *commentField = [tableView dequeueReusableCellWithIdentifier:@"getComment" forIndexPath:indexPath];
         commentField.mainLabel.text = @"Comment";
         commentField.textField.placeholder = @"Enter Comments";
@@ -50,13 +71,6 @@
         
         return commentField;
         
-    }
-    
-    else if (indexPath.section == 1 && indexPath.row == 0){
-        
-        MapFieldCell *mapField = [tableView dequeueReusableCellWithIdentifier:@"getMap" forIndexPath:indexPath];
-
-        return mapField;
     }
     
     else if (indexPath.section == 2 && indexPath.row == 0){
@@ -87,7 +101,7 @@
         return 3;
     }
     else if (section == 1) {
-        return 5;
+        return 2;
     }
     else if (section == 2) {
         return 2;
@@ -106,11 +120,11 @@
             break;
             
         case 1:
-            return @"Show Map";
+            return @"Submit Request";
             break;
             
         case 2:
-            return @"Take Picture";
+            return @"Attach Picture";
             break;
             
         default:

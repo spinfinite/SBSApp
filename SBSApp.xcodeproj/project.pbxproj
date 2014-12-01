@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E36C2C711A27ECCF00DA9163 /* EnterLocationTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E36C2C701A27ECCF00DA9163 /* EnterLocationTableViewDataSource.m */; };
 		E36C2C731A28FBB500DA9163 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36C2C721A28FBB500DA9163 /* CoreLocation.framework */; };
+		E36C2C751A2A1A6E00DA9163 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36C2C741A2A1A6E00DA9163 /* MessageUI.framework */; };
 		E37D2EEB1A204AE200E66938 /* LocationButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EEA1A204AE200E66938 /* LocationButtonCell.m */; };
 		E37D2EEE1A204B2200E66938 /* AddressFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EED1A204B2200E66938 /* AddressFieldCell.m */; };
 		E37D2EF11A204B5D00E66938 /* CommentFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */; };
@@ -45,6 +46,7 @@
 		E36C2C6F1A27ECCF00DA9163 /* EnterLocationTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterLocationTableViewDataSource.h; sourceTree = "<group>"; };
 		E36C2C701A27ECCF00DA9163 /* EnterLocationTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterLocationTableViewDataSource.m; sourceTree = "<group>"; };
 		E36C2C721A28FBB500DA9163 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E36C2C741A2A1A6E00DA9163 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E37D2EE91A204AE200E66938 /* LocationButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationButtonCell.h; path = ../LocationButtonCell.h; sourceTree = "<group>"; };
 		E37D2EEA1A204AE200E66938 /* LocationButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationButtonCell.m; path = ../LocationButtonCell.m; sourceTree = "<group>"; };
 		E37D2EEC1A204B2200E66938 /* AddressFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressFieldCell.h; path = ../AddressFieldCell.h; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E36C2C751A2A1A6E00DA9163 /* MessageUI.framework in Frameworks */,
 				E36C2C731A28FBB500DA9163 /* CoreLocation.framework in Frameworks */,
 				E3E154FB1A26807A007850F0 /* AVFoundation.framework in Frameworks */,
 				E39A4BA91A1C312B00909E63 /* MapKit.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		E39A4B761A1C2E4100909E63 = {
 			isa = PBXGroup;
 			children = (
+				E36C2C741A2A1A6E00DA9163 /* MessageUI.framework */,
 				E36C2C721A28FBB500DA9163 /* CoreLocation.framework */,
 				E3E154FA1A26807A007850F0 /* AVFoundation.framework */,
 				E39A4BA81A1C312B00909E63 /* MapKit.framework */,

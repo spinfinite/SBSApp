@@ -8,7 +8,14 @@
 
 #import "CameraViewController.h"
 
-@interface CameraViewController ()
+typedef NS_ENUM(NSInteger, ActionSheetButton){
+    ActionSheetFromLibrary,
+    ActionSheetTakePicture,
+};
+@interface CameraViewController () <UIActionSheetDelegate>
+
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -49,28 +56,86 @@
 
 - (IBAction)pickImage:(id)sender {
     
-    imagePicker = [[UIImagePickerController alloc]init];
+//    imagePicker = [[UIImagePickerController alloc]init];
+//    
+//    //set delegage
+//    
+//    imagePicker.delegate = self;
+//    
+//    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+//        
+//        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//        
+//        CameraViewController *cameraController = [CameraViewController new];
+//        [self presentViewController:cameraController animated:YES completion:nil];
+//        
+//    }
+//    
+//    else if([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDevice]){
+//        
+//        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//        
+//    }
+//    else{
+//        
+//        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//        
+//    }
     
-    //set delegage
+    UIActionSheet *profileActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"From Camera Roll", @"Take Picture", nil];
+    
+    [profileActionSheet showInView:self.view];
+    
+}
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    ActionSheetButton button = buttonIndex;
     
     imagePicker.delegate = self;
     
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        
-        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        
-        CameraViewController *cameraController = [CameraViewController new];
-        [self presentViewController:cameraController animated:YES completion:nil];
-        
-
-        
-    }
+    NSLog(@"%ld", (long)buttonIndex);
     
-    else{
-        
-        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        
+    switch (button) {
+            
+        case ActionSheetFromLibrary:{
+            imagePicker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
+            [self presentViewController:imagePicker animated:YES completion:nil];
+            break;
+        }
+            
+        case ActionSheetTakePicture:{
+            if ([UIImagePickerController isSourceTypeAvailable:
+                 UIImagePickerControllerSourceTypeCamera] == YES){
+                
+                imagePicker.sourceType =  UIImagePickerControllerSourceTypeCamera;
+                imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+                imagePicker.allowsEditing = YES;
+                
+                [self presentViewController:imagePicker animated:YES completion:nil];
+                
+            } else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Camera Not Available on Device" message:@"This device does not have a camera option. Please choose Photo Library" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alert show];
+            }
+            break;
+        }
     }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    // Access the uncropped image from info dictionary
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    
+    // Dismiss controller
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    // Set Avatar Image
+    self.imageView.image = image;
+    
+    // Any other actions you want to take with the image would go here
     
 }
+
+
 @end

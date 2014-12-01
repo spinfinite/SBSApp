@@ -78,6 +78,16 @@
 }
 */
 
+-  (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 0 && indexPath.row == 2) {
+        return 200;
+    }
+    else {
+        return 40;
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if(indexPath.section == 2 && indexPath.row == 0){
@@ -85,18 +95,8 @@
         CameraViewController *cameraController = [CameraViewController new];
         [self.navigationController presentViewController:cameraController animated:YES completion:nil];
         
-        NSLog(@"%@",@"Getting Called?");
-
-    }
-}
-
--  (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.section == 1 && indexPath.row == 0) {
-        return 200;
-    }
-    else {
-        return 40;
+        //        NSLog(@"%@",@"Getting Called?");
+        
     }
 }
 

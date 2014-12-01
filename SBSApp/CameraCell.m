@@ -41,9 +41,8 @@
 //    getCamera.backgroundColor = [UIColor greenColor];
     
     UILabel *getCamera = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-    getCamera.backgroundColor = [UIColor greenColor];
-    getCamera.text = @"Push to take Picture";
-    getCamera.textColor = [UIColor blueColor];
+    getCamera.backgroundColor = [UIColor grayColor];
+    getCamera.text = @"Attach Picture";
     
 //    CameraViewController *cameraController = [[CameraViewController alloc]init];
 //    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:cameraController];

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface CommentFieldCell : UITableViewCell
+@interface CommentFieldCell : UITableViewCell <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) UILabel *commentLabel;
