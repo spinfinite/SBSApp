@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+@protocol LocationButtonCellDelegate
+
+- (void) getLatLong;
+
+@end
+
 @interface LocationButtonCell : UITableViewCell <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;

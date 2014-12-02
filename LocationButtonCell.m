@@ -37,7 +37,6 @@
     
     UIButton *getCurrentButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [getCurrentButton setTitle:@"Push to get Location" forState:UIControlStateNormal];
-    
     [getCurrentButton addTarget:self.locationManager action:@selector(startUpdatingLocation) forControlEvents:UIControlEventTouchUpInside];
     
     getCurrentButton.frame = CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height);
@@ -66,9 +65,12 @@
               location.coordinate.latitude,
               location.coordinate.longitude);
     }
-    
-    CLLocation *usersLocation = locations.firstObject;
+
     [manager stopUpdatingLocation];
+    
+}
+
+- (void) getLatLong{
     
 }
 
