@@ -7,6 +7,7 @@
 //
 
 #import "AddressFieldCell.h"
+#import "LocationButtonCell.h"
 
 @implementation AddressFieldCell
 
@@ -37,21 +38,21 @@
     self.addressLabel = label;
     [self addSubview:label];
     
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 7,self.frame.size.width, 46)];
-    textField.textColor = [UIColor colorWithRed:238.0/255.0 green:237.0/255.0 blue:234.0/255.0 alpha:1];
-    textField.textAlignment = NSTextAlignmentNatural;
-    textField.keyboardType = UIKeyboardTypeDefault;
-    textField.keyboardType = UIKeyModifierControl;
-    //textField.delegate = self;
-    self.textField = textField;
-    [self addSubview:textField];
-        [textField resignFirstResponder];
-    
-}
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    
-    return NO;
+//    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 7,self.frame.size.width, 46)];
+//    textField.textColor = [UIColor colorWithRed:238.0/255.0 green:237.0/255.0 blue:234.0/255.0 alpha:1];
+//    textField.textAlignment = NSTextAlignmentNatural;
+//    textField.keyboardType = UIKeyboardTypeDefault;
+//    textField.keyboardType = UIKeyModifierControl;
+//    //textField.delegate = self;
+//    self.textField = textField;
+//    [self addSubview:textField];
+//        [textField resignFirstResponder];
+//    
+//}
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+//    [textField resignFirstResponder];
+//    
+//    return NO;
 }
 
 @end

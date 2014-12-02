@@ -66,6 +66,10 @@
               location.coordinate.latitude,
               location.coordinate.longitude);
     }
+    
+    CLLocation *usersLocation = locations.firstObject;
+    [manager stopUpdatingLocation];
+    
 }
 
 - (void)startSignificantChangeUpdates
