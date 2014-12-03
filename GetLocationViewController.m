@@ -15,7 +15,7 @@
 #import "CameraCell.h"
 #import "CameraViewController.h"
 
-@interface GetLocationViewController () <UITableViewDelegate>
+@interface GetLocationViewController () <UITableViewDelegate, GetLocationTableViewDataSourceDelegate>
 
 @property (nonatomic, strong) UITableView *GetLocationTableView;
 @property (nonatomic, strong) GetLocationTableViewDataSource *getLocationDataSource;
@@ -43,6 +43,8 @@
     view.backgroundColor = [UIColor whiteColor];
     
     self.getLocationDataSource = [GetLocationTableViewDataSource new];
+    self.getLocationDataSource.delegate = self;
+    
     
     self.GetLocationTableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     
@@ -51,6 +53,8 @@
     self.GetLocationTableView.delegate = self;
     self.GetLocationTableView.dataSource = self.getLocationDataSource;
     
+    //self.GetLocationTableView.dataSource.delegate = self;
+    
     [self.view addSubview:self.GetLocationTableView];
     
     [self.GetLocationTableView registerClass:[LocationButtonCell class] forCellReuseIdentifier:@"getLocation"];
@@ -58,6 +62,7 @@
     [self.GetLocationTableView registerClass:[CommentFieldCell class] forCellReuseIdentifier:@"getComment"];
     [self.GetLocationTableView registerClass:[MapFieldCell class] forCellReuseIdentifier:@"getMap"];
     [self.GetLocationTableView registerClass:[CameraCell class] forCellReuseIdentifier:@"getCamera"];
+    
     
     //self.view.backgroundColor = [UIColor blueColor];
 
@@ -95,9 +100,19 @@
         CameraViewController *cameraController = [CameraViewController new];
         [self.navigationController presentViewController:cameraController animated:YES completion:nil];
         
-        //        NSLog(@"%@",@"Getting Called?");
-        
     }
+}
+
+
+- (void) latitude:(CGFloat)latitude longitude:(CGFloat)longitude {
+    
+    self.latitude = latitude;
+    self.longitude = longitude;
+    
+    [self.GetLocationTableView reloadData];
+    
+    
+    
 }
 
 @end

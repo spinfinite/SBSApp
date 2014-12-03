@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface GetLocationViewController : UIViewController
 
+@property (nonatomic) CGFloat latitude;
+@property (nonatomic) CGFloat longitude;
+
 @end
+
+
+
+
+

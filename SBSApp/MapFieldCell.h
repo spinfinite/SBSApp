@@ -16,4 +16,11 @@
 @property (nonatomic, strong) UILabel *mainLabel;
 @property (weak, nonatomic) MKMapView *mapView;
 
+@property (nonatomic) CGFloat latitude;
+@property (nonatomic) CGFloat longitude;
+
+- (void) latitude:(CGFloat)latitude longitude:(CGFloat)longitude;
+
 @end
+
+

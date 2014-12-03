@@ -7,6 +7,7 @@
 //
 
 #import "LocationButtonCell.h"
+#import "GetLocationViewController.h"
 
 @implementation LocationButtonCell
 
@@ -61,18 +62,26 @@
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     if (abs(howRecent) < 5.0) {
         // If the event is recent, do something with it.
-        NSLog(@"latitude %+.6f, longitude %+.6f\n",
-              location.coordinate.latitude,
-              location.coordinate.longitude);
-    }
+//        NSLog(@"latitude %+.6f, longitude %+.6f\n",
+//              location.coordinate.latitude,
+//              location.coordinate.longitude);
+        
+        CGFloat latitude = location.coordinate.latitude;
+        CGFloat longitude = location.coordinate.longitude;
+        
+        
+//        NSLog(@"latitude %+.6f, longitude %+.6f\n", latitude, longitude);
+        
+        
+        [self.delegate latitude:(CGFloat)latitude longitude:(CGFloat)longitude];
 
+    }
+    
     [manager stopUpdatingLocation];
     
 }
 
-- (void) getLatLong{
-    
-}
+
 
 - (void)startSignificantChangeUpdates
 {
@@ -90,6 +99,10 @@
     
     NSLog(@"Error: %@", error);
     NSLog(@"Failed to get location");
+    
+}
+
+- (void) callLatLong {
     
 }
 

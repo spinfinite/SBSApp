@@ -10,9 +10,26 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+@protocol GetLocationTableViewDataSourceDelegate;
+
+
 @interface GetLocationTableViewDataSource : NSObject <UITableViewDataSource>
 
 @property (nonatomic, strong) UILabel *mainLabel;
 @property (nonatomic, strong) UITextField *textField;
+
+@property (nonatomic) CGFloat latitude;
+@property (nonatomic) CGFloat longitude;
+
+@property (nonatomic, assign) id<GetLocationTableViewDataSourceDelegate>delegate;
+
+@end
+
+
+@protocol GetLocationTableViewDataSourceDelegate <NSObject>
+
+@optional
+
+- (void) latitude:(CGFloat)latitude longitude:(CGFloat)longitude;
 
 @end

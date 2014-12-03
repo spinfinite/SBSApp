@@ -14,6 +14,10 @@
 #import "CameraCell.h"
 #import "CameraViewController.h"
 
+@interface GetLocationTableViewDataSource () <LocationButtonCellDelegate>
+
+@end
+
 @implementation GetLocationTableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -26,17 +30,15 @@
     if (indexPath.section == 0 && indexPath.row == 0){
         
         LocationButtonCell *getLocation = [tableView dequeueReusableCellWithIdentifier:@"getLocation" forIndexPath:indexPath];
-        
+        getLocation.delegate = self;
         return getLocation;
         
     }
     
     else if (indexPath.section == 0 && indexPath.row == 1) {
         AddressFieldCell *addressField = [tableView dequeueReusableCellWithIdentifier:@"getAddress" forIndexPath:indexPath];
-        addressField.mainLabel.text = @"Address";
-        addressField.textField.placeholder = @"Your Current Location";
-        [addressField.textField setValue:[UIColor colorWithRed:119.0/255.0 green:123.0/255.0 blue:133.0/255.0 alpha:1]
-                                       forKeyPath:@"_placeholderLabel.textColor"];
+        addressField.textColor = [UIColor blackColor];
+        addressField.addressLabel.text = [NSString stringWithFormat:@"Lat %.6f, Long %.6f\n", self.latitude, self.longitude];
         
         return addressField;
         
@@ -45,7 +47,7 @@
     else if (indexPath.section == 0 && indexPath.row == 2){
         
         MapFieldCell *mapField = [tableView dequeueReusableCellWithIdentifier:@"getMap" forIndexPath:indexPath];
-        
+        [mapField latitude:self.latitude longitude:self.longitude];
         return mapField;
     }
     
@@ -145,4 +147,15 @@
     }
 }
 
+- (void) latitude:(CGFloat)latitude longitude:(CGFloat)longitude{
+    
+
+    self.latitude = latitude;
+    self.longitude = longitude;
+    
+    [self.delegate latitude:(CGFloat)latitude longitude:(CGFloat)longitude];
+    
+    
+    
+}
 @end

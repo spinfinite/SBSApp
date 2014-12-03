@@ -9,14 +9,25 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@protocol LocationButtonCellDelegate
 
-- (void) getLatLong;
+@protocol LocationButtonCellDelegate;
 
-@end
+
 
 @interface LocationButtonCell : UITableViewCell <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
+
+@property (nonatomic, assign) id<LocationButtonCellDelegate>delegate;
+
+@end
+
+
+
+@protocol LocationButtonCellDelegate <NSObject>
+
+@optional
+
+- (void) latitude:(CGFloat)latitude longitude:(CGFloat)longitude;
 
 @end
