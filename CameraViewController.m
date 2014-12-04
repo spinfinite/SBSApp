@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, ActionSheetButton){
 @synthesize getImage, imagePicker;
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+//    [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"Camera View Controller";

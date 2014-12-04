@@ -56,6 +56,8 @@
     else if (indexPath.section == 1 && indexPath.row == 0){
         
         SendMessageCell *message = [tableView dequeueReusableCellWithIdentifier:@"sendMessage" forIndexPath:indexPath];
+        message.backgroundColor = [UIColor blueColor];
+        message.textLabel.text = [NSString stringWithFormat:@"Lat %.6f, Long %.6f\n", self.latitude, self.longitude];
         
         return message;
         

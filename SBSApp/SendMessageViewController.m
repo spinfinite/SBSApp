@@ -32,7 +32,7 @@
     mailComposer.mailComposeDelegate = self;
     
     NSArray *emailAddresses;
-    emailAddresses=[[NSArray alloc]initWithObjects:@"support@inthinc.com", nil];
+    emailAddresses=[[NSArray alloc]initWithObjects:@"spinfinite07@gmail.com", nil];
     
     //get strings for subject and message
     NSString *sendSubject = [[NSString alloc]initWithFormat:@"%@", self.Subject.text];
@@ -43,15 +43,18 @@
     [mailComposer setSubject:sendSubject];
 //    [mailComposer set:sendSpeed];
     [mailComposer setMessageBody:sendMessage isHTML:NO];
-//    [self modalPresentationStyle:mailComposer animated:YES];
-    [self presentViewController:mailComposer animated:YES completion:nil];
-    
+
+    [self presentViewController:mailComposer animated:YES completion:Nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//  [self mailComposeController didFinishWithResult error];
     
 }
 
-- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+- (void)mailComposeController:(MFMailComposeViewController *)mailComposer didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    
     
     [self dismissViewControllerAnimated:YES completion:nil];
+             NSLog(@"Print Me Here too!!");
     
 }
 
