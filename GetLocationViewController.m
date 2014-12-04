@@ -102,7 +102,7 @@
         [self.navigationController presentViewController:messageController animated:YES completion:nil];
         
 //        [self dismissViewControllerAnimated:YES completion:nil];
-         NSLog(@"Print Me!!");
+//         NSLog(@"Print Me!!");
     }
     else if(indexPath.section == 2 && indexPath.row == 0){
         
