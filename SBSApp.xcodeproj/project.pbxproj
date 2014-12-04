@@ -42,6 +42,7 @@
 		E3B8F0761A30E41D00709863 /* Truck40pt.png in Resources */ = {isa = PBXBuildFile; fileRef = E3B8F0751A30E41D00709863 /* Truck40pt.png */; };
 		E3B8F0791A30E48700709863 /* Truck152pt.png in Resources */ = {isa = PBXBuildFile; fileRef = E3B8F0771A30E48700709863 /* Truck152pt.png */; };
 		E3B8F07A1A30E48700709863 /* Truck76pt.png in Resources */ = {isa = PBXBuildFile; fileRef = E3B8F0781A30E48700709863 /* Truck76pt.png */; };
+		E3B8F07D1A30FBE200709863 /* SBSAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B8F07C1A30FBE200709863 /* SBSAppearance.m */; };
 		E3E154FB1A26807A007850F0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E154FA1A26807A007850F0 /* AVFoundation.framework */; };
 		E3E155041A278964007850F0 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E155021A278964007850F0 /* CameraViewController.m */; };
 		E3E155051A278964007850F0 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E155031A278964007850F0 /* CameraViewController.xib */; };
@@ -111,6 +112,8 @@
 		E3B8F0751A30E41D00709863 /* Truck40pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Truck40pt.png; sourceTree = "<group>"; };
 		E3B8F0771A30E48700709863 /* Truck152pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Truck152pt.png; sourceTree = "<group>"; };
 		E3B8F0781A30E48700709863 /* Truck76pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Truck76pt.png; sourceTree = "<group>"; };
+		E3B8F07B1A30FBE200709863 /* SBSAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSAppearance.h; sourceTree = "<group>"; };
+		E3B8F07C1A30FBE200709863 /* SBSAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSAppearance.m; sourceTree = "<group>"; };
 		E3E154FA1A26807A007850F0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E3E155011A278964007850F0 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
 		E3E155021A278964007850F0 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
@@ -164,6 +167,8 @@
 		E39A4B811A1C2E4100909E63 /* SBSApp */ = {
 			isa = PBXGroup;
 			children = (
+				E3B8F07B1A30FBE200709863 /* SBSAppearance.h */,
+				E3B8F07C1A30FBE200709863 /* SBSAppearance.m */,
 				E39A4B861A1C2E4100909E63 /* AppDelegate.h */,
 				E39A4B871A1C2E4100909E63 /* AppDelegate.m */,
 				E39A4B891A1C2E4100909E63 /* ViewController.h */,
@@ -374,6 +379,7 @@
 			files = (
 				E37D2EEB1A204AE200E66938 /* LocationButtonCell.m in Sources */,
 				E37D2EEE1A204B2200E66938 /* AddressFieldCell.m in Sources */,
+				E3B8F07D1A30FBE200709863 /* SBSAppearance.m in Sources */,
 				E39A4BAF1A1C31A300909E63 /* EnterLocationViewController.m in Sources */,
 				E39A4B8B1A1C2E4100909E63 /* ViewController.m in Sources */,
 				E37D2EF41A23B9BE00E66938 /* MapFieldCell.m in Sources */,

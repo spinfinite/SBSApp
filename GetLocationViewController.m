@@ -40,6 +40,7 @@
     // Do any additional setup after loading the view.
     
     self.title = @"Your Current Location";
+    [[UILabel appearance] setFont:[UIFont fontWithName:@"Avenir Next" size:20]];
     
     UIView *view = [[UIView alloc] initWithFrame:self.view.bounds];
     view.backgroundColor = [UIColor whiteColor];
@@ -111,16 +112,6 @@
         
     }
 }
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    
-//    if(indexPath.section == 1 && indexPath.row == 0){
-//        
-//        SendMessageViewController *messageController = [SendMessageViewController new];
-//        [self.navigationController presentViewController:messageController animated:YES completion:nil];
-//        
-//    }
-//}
 
 
 - (void) latitude:(CGFloat)latitude longitude:(CGFloat)longitude {

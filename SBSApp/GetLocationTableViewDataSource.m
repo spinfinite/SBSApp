@@ -39,7 +39,7 @@
     
     else if (indexPath.section == 0 && indexPath.row == 1) {
         AddressFieldCell *addressField = [tableView dequeueReusableCellWithIdentifier:@"getAddress" forIndexPath:indexPath];
-        addressField.backgroundColor = [UIColor blueColor];
+        addressField.backgroundColor = [UIColor lightTextColor];
         addressField.addressLabel.text = [NSString stringWithFormat:@"Lat %.6f, Long %.6f\n", self.latitude, self.longitude];
         
         return addressField;
@@ -56,8 +56,8 @@
     else if (indexPath.section == 1 && indexPath.row == 0){
         
         SendMessageCell *message = [tableView dequeueReusableCellWithIdentifier:@"sendMessage" forIndexPath:indexPath];
-        message.backgroundColor = [UIColor blueColor];
-        message.textLabel.text = [NSString stringWithFormat:@"Lat %.6f, Long %.6f\n", self.latitude, self.longitude];
+//        message.backgroundColor = [UIColor lightGrayColor];
+//        message.textLabel.text = [NSString stringWithFormat:@"Lat %.6f, Long %.6f\n", self.latitude, self.longitude];
         
         return message;
         
@@ -115,10 +115,10 @@
         return 3;
     }
     else if (section == 1) {
-        return 3;
+        return 1;
     }
     else if (section == 2) {
-        return 2;
+        return 1;
     }
 
     else {

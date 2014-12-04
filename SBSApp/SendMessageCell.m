@@ -34,7 +34,7 @@
 -(void)setup{
     
     UILabel *message = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-    message.backgroundColor = [UIColor lightGrayColor];
+    //message.backgroundColor = [UIColor lightTextColor];
     message.text = @"    Send Message";
     
     [self addSubview:message];

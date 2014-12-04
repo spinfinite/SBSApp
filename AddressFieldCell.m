@@ -33,10 +33,10 @@
 }
 
 -(void)setup{
-    self.addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, 0, 320, 40)];
+    self.addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
     self.addressLabel.textColor = [UIColor colorWithRed:238.0/255.0 green:237.0/255.0 blue:234.0/255.0 alpha:1];
     self.addressLabel.font = [UIFont fontWithName:@"Avenir Next" size:20];
-    self.addressLabel.backgroundColor = [UIColor blueColor];
+    self.addressLabel.backgroundColor = [UIColor lightGrayColor];
     [self addSubview:self.addressLabel];
     
     

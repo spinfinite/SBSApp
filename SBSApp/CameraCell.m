@@ -34,7 +34,7 @@
 -(void)setup{
     
     UILabel *getCamera = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-    getCamera.backgroundColor = [UIColor lightGrayColor];
+    getCamera.backgroundColor = [UIColor lightTextColor];
     getCamera.text = @"    Attach Picture";
     
     [self addSubview:getCamera];

@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, ActionSheetButton){
     
     self.title = @"Camera View Controller";
     
-    self.view.backgroundColor = [UIColor blueColor];
+    //self.view.backgroundColor = [UIColor blueColor];
     
 }
 

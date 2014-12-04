@@ -32,6 +32,7 @@
     self.SBSTableView.delegate = self;
     
     self.SBSTableView.rowHeight = (self.view.frame.size.height - 64) / 2;
+    self.SBSTableView.backgroundColor = [UIColor colorWithRed:45.0/255.0 green:50.0/255.0 blue:62.0/255.0 alpha:1];
     
     [self.view addSubview:self.SBSTableView];
     
