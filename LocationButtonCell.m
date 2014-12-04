@@ -37,11 +37,11 @@
     [self setupLocationManager];
     
     UIButton *getCurrentButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [getCurrentButton setTitle:@"Push to get Location" forState:UIControlStateNormal];
+    [getCurrentButton setTitle:@"PUSH TO GET LOCATION" forState:UIControlStateNormal];
     [getCurrentButton addTarget:self.locationManager action:@selector(startUpdatingLocation) forControlEvents:UIControlEventTouchUpInside];
     
     getCurrentButton.frame = CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height);
-    getCurrentButton.backgroundColor = [UIColor greenColor];
+    getCurrentButton.backgroundColor = [UIColor lightTextColor];
     [self addSubview:getCurrentButton];
     
 }
@@ -50,7 +50,7 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    self.locationManager.distanceFilter = 10.0;
+    self.locationManager.distanceFilter = 3.0;
     [self.locationManager requestWhenInUseAuthorization];
 }
 
@@ -99,10 +99,6 @@
     
     NSLog(@"Error: %@", error);
     NSLog(@"Failed to get location");
-    
-}
-
-- (void) callLatLong {
     
 }
 

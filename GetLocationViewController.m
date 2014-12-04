@@ -14,6 +14,8 @@
 #import "MapFieldCell.h"
 #import "CameraCell.h"
 #import "CameraViewController.h"
+#import "SendMessageCell.h"
+#import "SendMessageViewController.h"
 
 @interface GetLocationViewController () <UITableViewDelegate, GetLocationTableViewDataSourceDelegate>
 
@@ -53,8 +55,6 @@
     self.GetLocationTableView.delegate = self;
     self.GetLocationTableView.dataSource = self.getLocationDataSource;
     
-    //self.GetLocationTableView.dataSource.delegate = self;
-    
     [self.view addSubview:self.GetLocationTableView];
     
     [self.GetLocationTableView registerClass:[LocationButtonCell class] forCellReuseIdentifier:@"getLocation"];
@@ -62,6 +62,7 @@
     [self.GetLocationTableView registerClass:[CommentFieldCell class] forCellReuseIdentifier:@"getComment"];
     [self.GetLocationTableView registerClass:[MapFieldCell class] forCellReuseIdentifier:@"getMap"];
     [self.GetLocationTableView registerClass:[CameraCell class] forCellReuseIdentifier:@"getCamera"];
+    [self.GetLocationTableView registerClass:[SendMessageCell class] forCellReuseIdentifier:@"sendMessage"];
     
     
     //self.view.backgroundColor = [UIColor blueColor];
@@ -95,13 +96,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(indexPath.section == 2 && indexPath.row == 0){
+    if(indexPath.section == 1 && indexPath.row == 0){
+        
+        SendMessageViewController *messageController = [SendMessageViewController new];
+        [self.navigationController presentViewController:messageController animated:YES completion:nil];
+    }
+    else if(indexPath.section == 2 && indexPath.row == 0){
         
         CameraViewController *cameraController = [CameraViewController new];
         [self.navigationController presentViewController:cameraController animated:YES completion:nil];
-        
     }
 }
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    if(indexPath.section == 1 && indexPath.row == 0){
+//        
+//        SendMessageViewController *messageController = [SendMessageViewController new];
+//        [self.navigationController presentViewController:messageController animated:YES completion:nil];
+//        
+//    }
+//}
 
 
 - (void) latitude:(CGFloat)latitude longitude:(CGFloat)longitude {

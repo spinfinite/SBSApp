@@ -1,16 +1,15 @@
 //
-//  AddressFieldCell.m
+//  SendMessageCell.m
 //  SBSApp
 //
-//  Created by Sergio Perez on 11/21/14.
+//  Created by Sergio Perez on 12/3/14.
 //  Copyright (c) 2014 Learning iOS Development. All rights reserved.
 //
 
-#import "AddressFieldCell.h"
-#import "LocationButtonCell.h"
+#import "SendMessageCell.h"
+#import "SendMessageViewController.h"
 
-
-@implementation AddressFieldCell
+@implementation SendMessageCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -33,12 +32,12 @@
 }
 
 -(void)setup{
-    self.addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, 0, 320, 40)];
-    self.addressLabel.textColor = [UIColor colorWithRed:238.0/255.0 green:237.0/255.0 blue:234.0/255.0 alpha:1];
-    self.addressLabel.font = [UIFont fontWithName:@"Avenir Next" size:20];
-    self.addressLabel.backgroundColor = [UIColor blueColor];
-    [self addSubview:self.addressLabel];
     
+    UILabel *message = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    message.backgroundColor = [UIColor lightGrayColor];
+    message.text = @"    Send Message";
+    
+    [self addSubview:message];
     
 }
 

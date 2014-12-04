@@ -15,6 +15,9 @@
 		E37D2EF11A204B5D00E66938 /* CommentFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */; };
 		E37D2EF41A23B9BE00E66938 /* MapFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EF31A23B9BD00E66938 /* MapFieldCell.m */; };
 		E37D2EF71A26753400E66938 /* CameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E37D2EF61A26753400E66938 /* CameraCell.m */; };
+		E383D6091A2FFD740030E937 /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E383D6071A2FFD740030E937 /* SendMessageViewController.m */; };
+		E383D60A1A2FFD740030E937 /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E383D6081A2FFD740030E937 /* SendMessageViewController.xib */; };
+		E383D60D1A3010580030E937 /* SendMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E383D60C1A3010580030E937 /* SendMessageCell.m */; };
 		E39A4B851A1C2E4100909E63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4B841A1C2E4100909E63 /* main.m */; };
 		E39A4B881A1C2E4100909E63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4B871A1C2E4100909E63 /* AppDelegate.m */; };
 		E39A4B8B1A1C2E4100909E63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A4B8A1A1C2E4100909E63 /* ViewController.m */; };
@@ -57,6 +60,11 @@
 		E37D2EF31A23B9BD00E66938 /* MapFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapFieldCell.m; sourceTree = "<group>"; };
 		E37D2EF51A26753400E66938 /* CameraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraCell.h; sourceTree = "<group>"; };
 		E37D2EF61A26753400E66938 /* CameraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraCell.m; sourceTree = "<group>"; };
+		E383D6061A2FFD740030E937 /* SendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageViewController.h; sourceTree = "<group>"; };
+		E383D6071A2FFD740030E937 /* SendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageViewController.m; sourceTree = "<group>"; };
+		E383D6081A2FFD740030E937 /* SendMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMessageViewController.xib; sourceTree = "<group>"; };
+		E383D60B1A3010580030E937 /* SendMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageCell.h; sourceTree = "<group>"; };
+		E383D60C1A3010580030E937 /* SendMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageCell.m; sourceTree = "<group>"; };
 		E39A4B7F1A1C2E4100909E63 /* SBSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39A4B831A1C2E4100909E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39A4B841A1C2E4100909E63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,8 +163,13 @@
 				E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */,
 				E37D2EF21A23B9BD00E66938 /* MapFieldCell.h */,
 				E37D2EF31A23B9BD00E66938 /* MapFieldCell.m */,
+				E383D60B1A3010580030E937 /* SendMessageCell.h */,
+				E383D60C1A3010580030E937 /* SendMessageCell.m */,
 				E37D2EF51A26753400E66938 /* CameraCell.h */,
 				E37D2EF61A26753400E66938 /* CameraCell.m */,
+				E383D6061A2FFD740030E937 /* SendMessageViewController.h */,
+				E383D6071A2FFD740030E937 /* SendMessageViewController.m */,
+				E383D6081A2FFD740030E937 /* SendMessageViewController.xib */,
 				E3E155011A278964007850F0 /* CameraViewController.h */,
 				E3E155021A278964007850F0 /* CameraViewController.m */,
 				E3E155031A278964007850F0 /* CameraViewController.xib */,
@@ -276,6 +289,7 @@
 				E39A4B8E1A1C2E4100909E63 /* Main.storyboard in Resources */,
 				E3E155051A278964007850F0 /* CameraViewController.xib in Resources */,
 				E39A4B931A1C2E4100909E63 /* LaunchScreen.xib in Resources */,
+				E383D60A1A2FFD740030E937 /* SendMessageViewController.xib in Resources */,
 				E39A4B901A1C2E4100909E63 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +317,9 @@
 				E39A4BB51A1C364C00909E63 /* MainTableViewDataSource.m in Sources */,
 				E39A4BB81A1C5BE300909E63 /* GetLocationTableViewDataSource.m in Sources */,
 				E37D2EF71A26753400E66938 /* CameraCell.m in Sources */,
+				E383D6091A2FFD740030E937 /* SendMessageViewController.m in Sources */,
 				E3E155041A278964007850F0 /* CameraViewController.m in Sources */,
+				E383D60D1A3010580030E937 /* SendMessageCell.m in Sources */,
 				E36C2C711A27ECCF00DA9163 /* EnterLocationTableViewDataSource.m in Sources */,
 				E39A4BAC1A1C317900909E63 /* GetLocationViewController.m in Sources */,
 				E39A4B851A1C2E4100909E63 /* main.m in Sources */,

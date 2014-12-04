@@ -13,6 +13,8 @@
 #import "MapFieldCell.h"
 #import "CameraCell.h"
 #import "CameraViewController.h"
+#import "SendMessageCell.h"
+#import "SendMessageViewController.h"
 
 @interface GetLocationTableViewDataSource () <LocationButtonCellDelegate>
 
@@ -37,7 +39,7 @@
     
     else if (indexPath.section == 0 && indexPath.row == 1) {
         AddressFieldCell *addressField = [tableView dequeueReusableCellWithIdentifier:@"getAddress" forIndexPath:indexPath];
-        addressField.textColor = [UIColor blackColor];
+        addressField.backgroundColor = [UIColor blueColor];
         addressField.addressLabel.text = [NSString stringWithFormat:@"Lat %.6f, Long %.6f\n", self.latitude, self.longitude];
         
         return addressField;
@@ -53,6 +55,14 @@
     
     else if (indexPath.section == 1 && indexPath.row == 0){
         
+        SendMessageCell *message = [tableView dequeueReusableCellWithIdentifier:@"sendMessage" forIndexPath:indexPath];
+        
+        return message;
+        
+    }
+    
+    else if (indexPath.section == 1 && indexPath.row == 1){
+        
         CommentFieldCell *commentField = [tableView dequeueReusableCellWithIdentifier:@"getComment" forIndexPath:indexPath];
         commentField.mainLabel.text = @"Comment";
         commentField.textField.placeholder = @"Enter Correct Speed Limit";
@@ -63,7 +73,7 @@
         
     }
     
-    else if (indexPath.section == 1 && indexPath.row == 1){
+    else if (indexPath.section == 1 && indexPath.row == 2){
         
         CommentFieldCell *commentField = [tableView dequeueReusableCellWithIdentifier:@"getComment" forIndexPath:indexPath];
         commentField.mainLabel.text = @"Comment";
@@ -103,7 +113,7 @@
         return 3;
     }
     else if (section == 1) {
-        return 2;
+        return 3;
     }
     else if (section == 2) {
         return 2;

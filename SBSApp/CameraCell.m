@@ -33,38 +33,11 @@
 
 -(void)setup{
     
-//    UIButton *getCamera = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    [getCamera setTitle:@"Push to take Picture" forState:UIControlStateNormal];
-//    [getCamera addTarget:self action:@selector(locationMethod) forControlEvents:UIControlEventTouchUpInside];
-//    
-//    getCamera.frame = CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height);
-//    getCamera.backgroundColor = [UIColor greenColor];
-    
     UILabel *getCamera = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-    getCamera.backgroundColor = [UIColor grayColor];
-    getCamera.text = @"Attach Picture";
-    
-//    CameraViewController *cameraController = [[CameraViewController alloc]init];
-//    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:cameraController];
-//////
-//    self.window.rootViewController = navigationController;
+    getCamera.backgroundColor = [UIColor lightGrayColor];
+    getCamera.text = @"    Attach Picture";
     
     [self addSubview:getCamera];
-    
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    [self.window makeKeyAndVisible];
-    
-}
-
-
-
--(void)locationMethod{
-    
-//        CameraViewController *camController = [CameraViewController new];
-//        [self.navigationController pushViewController:camController animated:YES];
-    
-//    CameraViewController *cameraController = [[CameraViewController alloc]init];
-//    [self.navigationController showviewcon:cameraController animated:YES];
     
 }
 
