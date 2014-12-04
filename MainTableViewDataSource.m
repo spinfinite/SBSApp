@@ -31,6 +31,8 @@
         newCell = [UITableViewCell new];
     }
     newCell.textLabel.text = [self mainOptions][indexPath.row];
+    newCell.backgroundColor = [UIColor colorWithRed:100.0/255.0 green:237.0/255.0 blue:100.0/255.0 alpha:1];
+    
     return newCell;
     
 }

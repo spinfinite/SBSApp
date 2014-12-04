@@ -167,8 +167,6 @@
 		E39A4B811A1C2E4100909E63 /* SBSApp */ = {
 			isa = PBXGroup;
 			children = (
-				E3B8F07B1A30FBE200709863 /* SBSAppearance.h */,
-				E3B8F07C1A30FBE200709863 /* SBSAppearance.m */,
 				E39A4B861A1C2E4100909E63 /* AppDelegate.h */,
 				E39A4B871A1C2E4100909E63 /* AppDelegate.m */,
 				E39A4B891A1C2E4100909E63 /* ViewController.h */,
@@ -188,8 +186,6 @@
 				E37D2EEA1A204AE200E66938 /* LocationButtonCell.m */,
 				E37D2EEC1A204B2200E66938 /* AddressFieldCell.h */,
 				E37D2EED1A204B2200E66938 /* AddressFieldCell.m */,
-				E37D2EEF1A204B5D00E66938 /* CommentFieldCell.h */,
-				E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */,
 				E37D2EF21A23B9BD00E66938 /* MapFieldCell.h */,
 				E37D2EF31A23B9BD00E66938 /* MapFieldCell.m */,
 				E383D60B1A3010580030E937 /* SendMessageCell.h */,
@@ -202,6 +198,10 @@
 				E3E155011A278964007850F0 /* CameraViewController.h */,
 				E3E155021A278964007850F0 /* CameraViewController.m */,
 				E3E155031A278964007850F0 /* CameraViewController.xib */,
+				E37D2EEF1A204B5D00E66938 /* CommentFieldCell.h */,
+				E37D2EF01A204B5D00E66938 /* CommentFieldCell.m */,
+				E3B8F07B1A30FBE200709863 /* SBSAppearance.h */,
+				E3B8F07C1A30FBE200709863 /* SBSAppearance.m */,
 				E39A4B8F1A1C2E4100909E63 /* Images.xcassets */,
 				E3B8F0681A30E17100709863 /* TruckImages */,
 				E3B8F04E1A30D9E200709863 /* SBSIconImage */,

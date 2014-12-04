@@ -23,7 +23,7 @@
 
     self.title = @"Mail View Controller";
 
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor colorWithRed:100.0/255.0 green:237.0/255.0 blue:100.0/255.0 alpha:1];;
 
 }
 - (IBAction)SendMessage:(id)sender{
