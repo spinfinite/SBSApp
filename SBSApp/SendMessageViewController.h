@@ -9,10 +9,11 @@
 #import "ViewController.h"
 #import <MessageUI/MessageUI.h>
 
-@interface SendMessageViewController : ViewController <MFMailComposeViewControllerDelegate>
+@interface SendMessageViewController : ViewController <MFMailComposeViewControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *Subject;
 @property (strong, nonatomic) IBOutlet UITextView *Message;
-@property (strong, nonatomic) IBOutlet UITextField *Speed;
+
+//@property (strong, nonatomic) IBOutlet UITextField *Speed;
 - (IBAction)SendMessage:(id)sender;
 
 

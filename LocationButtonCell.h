@@ -12,8 +12,6 @@
 
 @protocol LocationButtonCellDelegate;
 
-
-
 @interface LocationButtonCell : UITableViewCell <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -21,8 +19,6 @@
 @property (nonatomic, assign) id<LocationButtonCellDelegate>delegate;
 
 @end
-
-
 
 @protocol LocationButtonCellDelegate <NSObject>
 

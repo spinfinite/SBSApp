@@ -100,11 +100,14 @@
         
         SendMessageViewController *messageController = [SendMessageViewController new];
         [self.navigationController presentViewController:messageController animated:YES completion:nil];
+        
+        NSLog(@"Print Me!!");
     }
     else if(indexPath.section == 2 && indexPath.row == 0){
         
         CameraViewController *cameraController = [CameraViewController new];
         [self.navigationController presentViewController:cameraController animated:YES completion:nil];
+        
     }
 }
 

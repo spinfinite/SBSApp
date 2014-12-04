@@ -8,7 +8,7 @@
 
 #import "SendMessageViewController.h"
 
-@interface SendMessageViewController ()
+@interface SendMessageViewController () 
 
 @end
 
@@ -18,7 +18,7 @@
 @synthesize Message;
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+   // [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
     self.title = @"Mail View Controller";
@@ -41,6 +41,7 @@
     
     [mailComposer setToRecipients:emailAddresses];
     [mailComposer setSubject:sendSubject];
+//    [mailComposer set:sendSpeed];
     [mailComposer setMessageBody:sendMessage isHTML:NO];
 //    [self modalPresentationStyle:mailComposer animated:YES];
     [self presentViewController:mailComposer animated:YES completion:nil];
