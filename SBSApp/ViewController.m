@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.title = @"The SBS App";
+    self.title = @"Home";
     self.tableViewDataSource = [MainTableViewDataSource new];
     
     self.SBSTableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];

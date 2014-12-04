@@ -11,7 +11,7 @@
 @implementation MainTableViewDataSource
 
 - (NSArray *)mainOptions{
-    return @[@"Get Location View", @"Enter Location View"];
+    return @[@"Get My Current Location", @"Enter a Location"];
 }
 
 - (void)registerTableView:(UITableView *)tableView{
