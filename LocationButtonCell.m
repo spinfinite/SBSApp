@@ -60,7 +60,7 @@
 
     NSDate* eventDate = location.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-    if (abs(howRecent) < 5.0) {
+    if (abs(howRecent) < 5) {
         // If the event is recent, do something with it.
 //        NSLog(@"latitude %+.6f, longitude %+.6f\n",
 //              location.coordinate.latitude,

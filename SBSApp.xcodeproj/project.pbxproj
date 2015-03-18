@@ -51,6 +51,7 @@
 		E3BCEB0F1AB8041900E4A58D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BCEB0D1AB8041900E4A58D /* Interface.storyboard */; };
 		E3BCEB111AB8041900E4A58D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BCEB101AB8041900E4A58D /* Images.xcassets */; };
 		E3BCEB141AB8041900E4A58D /* SBSApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3BCEAF41AB8041900E4A58D /* SBSApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E3BCEB1D1AB9016F00E4A58D /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3BCEB1C1AB9016F00E4A58D /* WatchKit.framework */; };
 		E3E154FB1A26807A007850F0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E154FA1A26807A007850F0 /* AVFoundation.framework */; };
 		E3E155041A278964007850F0 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E155021A278964007850F0 /* CameraViewController.m */; };
 		E3E155051A278964007850F0 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E155031A278964007850F0 /* CameraViewController.xib */; };
@@ -164,6 +165,7 @@
 		E3BCEB0C1AB8041900E4A58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3BCEB0E1AB8041900E4A58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		E3BCEB101AB8041900E4A58D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3BCEB1C1AB9016F00E4A58D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		E3E154FA1A26807A007850F0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E3E155011A278964007850F0 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
 		E3E155021A278964007850F0 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BCEB1D1AB9016F00E4A58D /* WatchKit.framework in Frameworks */,
 				E36C2C751A2A1A6E00DA9163 /* MessageUI.framework in Frameworks */,
 				E36C2C731A28FBB500DA9163 /* CoreLocation.framework in Frameworks */,
 				E3E154FB1A26807A007850F0 /* AVFoundation.framework in Frameworks */,
@@ -202,6 +205,7 @@
 		E39A4B761A1C2E4100909E63 = {
 			isa = PBXGroup;
 			children = (
+				E3BCEB1C1AB9016F00E4A58D /* WatchKit.framework */,
 				E36C2C741A2A1A6E00DA9163 /* MessageUI.framework */,
 				E36C2C721A28FBB500DA9163 /* CoreLocation.framework */,
 				E3E154FA1A26807A007850F0 /* AVFoundation.framework */,
@@ -710,7 +714,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SBSApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -722,7 +726,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SBSApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
